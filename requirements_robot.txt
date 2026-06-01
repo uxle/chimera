@@ -1,0 +1,40 @@
+# ChimeraRobot — Python Dependencies
+# Install: pip install -r requirements_robot.txt
+
+# ── Core (always required) ──────────────────────────────────────────
+torch>=2.1.0                # Neural networks, GPU/MPS/CPU
+numpy>=1.24.0               # Sensor data processing
+
+# ── Vision ──────────────────────────────────────────────────────────
+opencv-python>=4.8.0        # Real camera capture (cv2)
+Pillow>=10.0.0              # Image preprocessing fallback
+
+# ── Audio ───────────────────────────────────────────────────────────
+pyaudio>=0.2.13             # Real microphone capture
+# OR on Linux: sudo apt install python3-pyaudio portaudio19-dev
+
+# ── Speech ──────────────────────────────────────────────────────────
+pyttsx3>=2.90               # Offline TTS (Windows/Linux/macOS)
+# espeak: sudo apt install espeak-ng  (Linux)
+#         brew install espeak         (macOS)
+
+# Offline STT (choose one):
+vosk>=0.3.45                # Lightweight offline STT (50MB model)
+# openai-whisper>=20231117  # Higher accuracy offline STT (142MB+ model)
+
+# ── Hardware communication ───────────────────────────────────────────
+pyserial>=3.5               # Serial port for servo controllers (real robot)
+# smbus2>=0.4.3             # I2C for sensors (Raspberry Pi)
+
+# ── Optional: simulation rendering ─────────────────────────────────
+matplotlib>=3.7.0           # 2D world visualisation
+
+# ── Optional: hardware detection ───────────────────────────────────
+psutil>=5.9.0               # Memory / CPU info
+
+# ── Optional: ONNX export ──────────────────────────────────────────
+# onnx>=1.15.0
+# onnxruntime>=1.16.0
+
+# ── Development ─────────────────────────────────────────────────────
+# tensorboard>=2.14.0       # Training visualisation
